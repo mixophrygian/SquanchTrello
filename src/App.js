@@ -71,6 +71,7 @@ class App extends Component {
             hintText="Task Name"
             required
           />
+          <br />
           <TextField
             floatingLabelText="Task Description"
           />

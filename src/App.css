@@ -24,6 +24,10 @@
   align-items: center;
 }
 
+.App__addTask--content h1 {
+  font-size: 20px;
+}
+
 .App__addTask--content .button {
   margin-left: 1rem;
 }

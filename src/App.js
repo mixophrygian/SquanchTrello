@@ -13,6 +13,7 @@ import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
 
 import './App.css';
+import './reset.css'
 
 class App extends Component {
 
@@ -46,7 +47,7 @@ class App extends Component {
             <h1>ADD TASK</h1>
             <div className="App__addTask--content button">
               <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
-                <FloatingActionButton onClick={this.handleOpen}>
+                <FloatingActionButton mini={true} onClick={this.handleOpen}>
                   <ContentAdd />
                 </FloatingActionButton>
               </MuiThemeProvider>

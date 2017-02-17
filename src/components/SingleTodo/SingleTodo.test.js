@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TodoList from './TodoList';
+import SingleTodo from './SingleTodo';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<TodoList />, div);
+  ReactDOM.render(<SingleTodo />, div);
 });

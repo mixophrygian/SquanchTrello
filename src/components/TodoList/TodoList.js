@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import SingleTodo from '../SingleTodo/SingleTodo'
 import './TodoList.css';
 import './../../styles/reset.css'
 
@@ -55,7 +56,7 @@ class TodoList extends Component {
               {
                 this.state.todo.map(function(item, index){
                   return(
-                    <div key={"todo-" + index}>{item.taskName}</div>
+                    <SingleTodo data={item} key={"todo-" + index}></SingleTodo>
                   )
                 })
               }
@@ -70,7 +71,7 @@ class TodoList extends Component {
               {
                 this.state.inProgress.map(function(item, index){
                   return(
-                    <div key={"todo-" + index}>{item.taskName}</div>
+                    <SingleTodo data={item} key={"todo-" + index}></SingleTodo>
                   )
                 })
               }
@@ -85,7 +86,7 @@ class TodoList extends Component {
               {
                 this.state.complete.map(function(item, index){
                   return(
-                    <div key={"todo-" + index}>{item.taskName}</div>
+                    <SingleTodo data={item} key={"todo-" + index}></SingleTodo>
                   )
                 })
               }

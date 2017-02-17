@@ -19,6 +19,27 @@ module.exports = {
     this.availableID++;
   },
 
+  updateTodo: function(todo){
+    var toMod = $.grep(this.todos, function(o){ return o.id === todo.id})[0];
+    var newState = function(){
+      switch(toMod.state){
+      case 'todo':
+        return 'in-progress';
+      case 'in-progress':
+        return 'complete';
+      case 'complete':
+        return 'archive';
+      default:
+        return 'todo';
+      }
+    }();
+    toMod.state = newState;
+    var Promise = promise.Promise;
+    return new Promise(function(resolve, reject){
+      resolve();
+    });
+  },
+
   getSeedTodos: function(){
     var Promise = promise.Promise;
     return new Promise(function(resolve, reject){

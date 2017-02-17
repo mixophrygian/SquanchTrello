@@ -1,4 +1,4 @@
-var dispatcher = require('../dispatcher');
+import dispatcher from './dispatcher';
 
 module.exports = {
   addTodo: function(singleTodo){

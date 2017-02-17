@@ -24,8 +24,7 @@ function EntryStore() {
   }
 
   function updateTodo(singleTodo) {
-    todoService.updateTodo(singleTodo).then(function(res){
-      console.log(res);
+    todoService.updateTodo(singleTodo).then(function(){
       triggerListeners();
     })
   }

@@ -1,10 +1,10 @@
 .App {
   display: flex;
+  height: 100vh;
   padding: 2rem;
   border: 1px solid black;
   font-family: 'Comic Sans MS';
   font-size: 1rem;
-  text-align: center;
 }
 
 .App > * {

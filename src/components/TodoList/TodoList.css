@@ -18,6 +18,7 @@
 .TodoList__Column--ToDo,
 .TodoList__Column--InProgress,
 .TodoList__Column--Complete {
+  overflow: scroll;
   height: 88%;
   border: 1px solid black;
 }

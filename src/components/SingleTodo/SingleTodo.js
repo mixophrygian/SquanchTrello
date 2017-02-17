@@ -21,8 +21,8 @@ class SingleTodo extends Component {
       return (
         <div className="SingleTodo">
           <div className="textContainer">
-            <h3>{this.props.data.taskName}</h3>
-            <h5>{this.props.data.taskDescription}</h5>
+            <span className="textContainer--name">{this.props.data.taskName}</span>
+            <span className="textContainer--description">{this.props.data.taskDescription}</span>
           </div>
           <div className="buttonContainer">
             <button onClick={this.advanceTodo}>Start</button>

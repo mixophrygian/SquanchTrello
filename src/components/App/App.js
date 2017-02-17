@@ -13,26 +13,48 @@ import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
 
 import './App.css';
-import TodoList from '../TodoList/TodoList'
 import './../../styles/reset.css'
+import TodoList from '../TodoList/TodoList';
+import actions from '../../TodoActions';
 
 class App extends Component {
 
-  state = {
-    open: false,
-  };
+  constructor(props){
+    super(props);
+    this.state = {
+      open: false,
+      name: '',
+      description: ''
+    };
+  }
 
   handleOpen = () => {
     this.setState({open: true});
   };
 
   handleAdd = () => {
-    //get the new Todo data!
     this.setState({open: false});
+    actions.addTodo(this.state);
+    this.clearInputs();
+  };
+
+  clearInputs = () => {
+    this.setState({
+      name: '',
+      description: ''
+    })
   };
 
   handleClose = () => {
     this.setState({open: false});
+  };
+
+  handleInputChange = (e) => {
+    e.preventDefault();
+    var name = e.target.name;
+    var state = this.state;
+    state[name] = e.target.value;
+    this.setState(state);
   };
 
   render() {
@@ -72,13 +94,19 @@ class App extends Component {
             onRequestClose={this.handleClose}
           >
           <TextField
+            name="name"
             floatingLabelText="Task Name"
             hintText="Task Name"
+            value={this.state.name}
+            onChange={this.handleInputChange}
             required
           />
           <br />
           <TextField
+            name="description"
             floatingLabelText="Task Description"
+            value={this.state.description}
+            onChange={this.handleInputChange}
           />
           </Dialog>
         </MuiThemeProvider>

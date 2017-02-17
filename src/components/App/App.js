@@ -26,6 +26,11 @@ class App extends Component {
     this.setState({open: true});
   };
 
+  handleAdd = () => {
+    //get the new Todo data!
+    this.setState({open: false});
+  };
+
   handleClose = () => {
     this.setState({open: false});
   };
@@ -37,7 +42,7 @@ class App extends Component {
         label="Add Task"
         primary={true}
         keyboardFocused={true}
-        onTouchTap={this.handleClose}
+        onTouchTap={this.handleAdd}
       />,
     ];
 

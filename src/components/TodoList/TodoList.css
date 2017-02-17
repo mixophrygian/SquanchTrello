@@ -4,7 +4,6 @@
 
 .TodoList__Column {
   flex: 1;
-  border: 1px solid black;
   overflow: scroll;
 }
 
@@ -18,6 +17,7 @@
 
 .TodoList__Column--ToDo,
 .TodoList__Column--InProgress,
-.TodoList__Column--Done {
-  max-height: 80vh;
+.TodoList__Column--Complete {
+  height: 88%;
+  border: 1px solid black;
 }

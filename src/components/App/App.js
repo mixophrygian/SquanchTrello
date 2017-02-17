@@ -51,8 +51,8 @@ class App extends Component {
 
   handleInputChange = (e) => {
     e.preventDefault();
-    var name = e.target.name;
-    var state = this.state;
+    const name = e.target.name;
+    const state = this.state;
     state[name] = e.target.value;
     this.setState(state);
   };

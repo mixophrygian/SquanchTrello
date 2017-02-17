@@ -16,10 +16,10 @@ class TodoList extends Component {
   }
 
   componentWillReceiveProps(nextProps){
-    var todo = [];
-    var inProgress = [];
-    var complete = [];
-    var archive = [];
+    let todo = [];
+    let inProgress = [];
+    let complete = [];
+    let archive = [];
 
     todo = nextProps.todos.filter(function(todo){
         return todo.state === "todo"

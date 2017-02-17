@@ -31,3 +31,9 @@
 .App__addTask--content .button {
   margin-left: 1rem;
 }
+
+.TodoList{ /*replace with TodoList component */
+  border: 1px solid red;
+  flex: 3;
+
+}

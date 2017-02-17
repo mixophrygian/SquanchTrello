@@ -9,7 +9,6 @@
 
 .App > * {
   flex: 1;
-  border: 1px solid black;
 }
 
 .App__addTask {
@@ -32,8 +31,6 @@
   margin-left: 1rem;
 }
 
-.TodoList{ /*replace with TodoList component */
-  border: 1px solid red;
+.TodoList {
   flex: 3;
-
 }

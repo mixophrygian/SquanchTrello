@@ -13,6 +13,7 @@ import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
 
 import './App.css';
+import TodoList from '../TodoList/TodoList'
 import './../../styles/reset.css'
 
 class App extends Component {
@@ -40,9 +41,6 @@ class App extends Component {
       />,
     ];
 
-    var todos = this.props.todos;
-    console.log(todos);
-
     return (
       <div className="App">
         <div className="App__addTask">
@@ -57,11 +55,8 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <div className="TodoList" >
-          <div>TODO</div>
-          <div>IN PROGRESS</div>
-          <div>DONE</div>
-        </div>
+
+        <TodoList className="TodoList" todos={this.props.todos}></TodoList>
 
         <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
           <Dialog

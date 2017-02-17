@@ -1,0 +1,23 @@
+.TodoList{
+  display: flex;
+}
+
+.TodoList__Column {
+  flex: 1;
+  border: 1px solid black;
+  overflow: scroll;
+}
+
+.TodoList__Column:nth-child(2){
+  margin: 0 1rem;
+}
+
+.TodoList__Column h1 {
+  margin-bottom: 1rem;
+}
+
+.TodoList__Column--ToDo,
+.TodoList__Column--InProgress,
+.TodoList__Column--Done {
+  max-height: 80vh;
+}
